@@ -26,7 +26,17 @@ import (
 	securityv1alpha1 "github.com/giantswarm/apiextensions/pkg/apis/security/v1alpha1"
 	toolingv1alpha1 "github.com/giantswarm/apiextensions/pkg/apis/tooling/v1alpha1"
 
-	"github.com/giantswarm/cp-api-spec/spec-gen/pkg/openapi"
+	modelApplicationv1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/application/v1alpha1"
+	modelBackupv1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/backup/v1alpha1"
+	modelCorev1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/core/v1alpha1"
+	modelExamplev1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/example/v1alpha1"
+	modelInfrastructurev1alpha2 "github.com/giantswarm/cp-api-spec/pkg/apis/infrastructure/v1alpha2"
+	modelProviderv1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/provider/v1alpha1"
+	modelReleasev1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/release/v1alpha1"
+	modelSecurityv1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/security/v1alpha1"
+	modelToolingv1alpha1 "github.com/giantswarm/cp-api-spec/pkg/apis/tooling/v1alpha1"
+
+	"github.com/giantswarm/cp-api-spec/pkg/openapi"
 )
 
 const (
@@ -78,15 +88,15 @@ func main() {
 	}
 
 	definitionFactories := []common.GetOpenAPIDefinitions{
-		corev1alpha1.GetOpenAPIDefinitions,
-		applicationv1alpha1.GetOpenAPIDefinitions,
-		backupv1alpha1.GetOpenAPIDefinitions,
-		infrastructurev1alpha2.GetOpenAPIDefinitions,
-		examplev1alpha1.GetOpenAPIDefinitions,
-		providerv1alpha1.GetOpenAPIDefinitions,
-		releasev1alpha1.GetOpenAPIDefinitions,
-		securityv1alpha1.GetOpenAPIDefinitions,
-		toolingv1alpha1.GetOpenAPIDefinitions,
+		modelCorev1alpha1.GetOpenAPIDefinitions,
+		modelApplicationv1alpha1.GetOpenAPIDefinitions,
+		modelBackupv1alpha1.GetOpenAPIDefinitions,
+		modelInfrastructurev1alpha2.GetOpenAPIDefinitions,
+		modelExamplev1alpha1.GetOpenAPIDefinitions,
+		modelProviderv1alpha1.GetOpenAPIDefinitions,
+		modelReleasev1alpha1.GetOpenAPIDefinitions,
+		modelSecurityv1alpha1.GetOpenAPIDefinitions,
+		modelToolingv1alpha1.GetOpenAPIDefinitions,
 	}
 
 	c := openapi.Config{

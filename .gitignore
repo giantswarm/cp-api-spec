@@ -1,3 +1,4 @@
-spec-gen/spec-gen
-spec-gen/apiserver.local.config
 apiserver.local.config
+pkg/model-gen/cache
+pkg/model-gen/model-gen
+cp-api-spec
