@@ -1,7 +1,5 @@
 module github.com/giantswarm/cp-api-spec/model-gen
 
-go 1.14
+go 1.16
 
-require (
-        k8s.io/code-generator v0.16.6
-)
+require k8s.io/code-generator v0.18.9

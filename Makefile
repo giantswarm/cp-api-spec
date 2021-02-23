@@ -1,4 +1,4 @@
-APIEXTENSIONS_BRANCH := add-openapi-spec-generator
+APIEXTENSIONS_BRANCH := master
 
 MODEL_GEN_FOLDER := pkg/model-gen
 APIS_DIR := $(MODEL_GEN_FOLDER)/cache/pkg/apis
@@ -30,7 +30,7 @@ openapi-model: openapi-model-gen-prereqs openapi-model-build-gen
 	@echo "$(GEN_COLOR)Generating OpenAPI models $(NO_COLOR)"
 	@for gv in $(shell find $(APIS_DIR) -maxdepth 2 -mindepth 2 | sed 's|pkg/model-gen/cache/pkg/apis/||') ; do \
 		$(MODEL_GEN_FOLDER)/model-gen \
-		--input-dirs "github.com/giantswarm/apiextensions/pkg/apis/$$gv,github.com/giantswarm/apiextensions/pkg/serialization,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/api/resource,k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/version,k8s.io/api/core/v1" \
+		--input-dirs "github.com/giantswarm/apiextensions/v3/pkg/apis/$$gv,github.com/giantswarm/apiextensions/v3/pkg/serialization,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/api/resource,k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/version,k8s.io/api/core/v1" \
 		--output-package "$$gv" \
 		--output-base pkg/apis \
 		--go-header-file hack/boilerplate.go.txt ; \
@@ -66,5 +66,5 @@ openapi-spec: openapi-spec-build-gen
 openapi-spec-build-gen: go.mod
 	@echo "$(BUILD_COLOR)Building OpenAPI spec generator$(NO_COLOR)"
 	@echo "Using apiextensions branch '$(APIEXTENSIONS_BRANCH)'"
-	@go get github.com/giantswarm/apiextensions@$(APIEXTENSIONS_BRANCH)
+	@go get github.com/giantswarm/apiextensions/v3@$(APIEXTENSIONS_BRANCH)
 	@go build

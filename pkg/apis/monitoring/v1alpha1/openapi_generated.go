@@ -32,351 +32,307 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfig":                                       schema_pkg_apis_provider_v1alpha1_AWSConfig(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigList":                                   schema_pkg_apis_provider_v1alpha1_AWSConfigList(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpec":                                   schema_pkg_apis_provider_v1alpha1_AWSConfigSpec(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWS":                                schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWS(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPI":                             schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSAPI(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPIELB":                          schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSAPIELB(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcd":                            schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSEtcd(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcdELB":                         schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSEtcdELB(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZones":                     schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSHostedZones(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZonesZone":                 schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSHostedZonesZone(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngress":                         schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSIngress(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngressELB":                      schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSIngressELB(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSNode":                            schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSNode(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSVPC":                             schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSVPC(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecVersionBundle":                      schema_pkg_apis_provider_v1alpha1_AWSConfigSpecVersionBundle(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatus":                                 schema_pkg_apis_provider_v1alpha1_AWSConfigStatus(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWS":                              schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWS(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAutoScalingGroup":              schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAutoScalingGroup(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZone":              schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZone(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnet":        schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnet(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPrivate": schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnetPrivate(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPublic":  schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnetPublic(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfig":                                     schema_pkg_apis_provider_v1alpha1_AzureConfig(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigList":                                 schema_pkg_apis_provider_v1alpha1_AzureConfigList(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpec":                                 schema_pkg_apis_provider_v1alpha1_AzureConfigSpec(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzure":                            schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzure(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZones":                    schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureDNSZones(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZonesDNSZone":             schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureDNSZonesDNSZone(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureNode":                        schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureNode(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureVirtualNetwork":              schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureVirtualNetwork(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecVersionBundle":                    schema_pkg_apis_provider_v1alpha1_AzureConfigSpecVersionBundle(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatus":                               schema_pkg_apis_provider_v1alpha1_AzureConfigStatus(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProvider":                       schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProvider(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngress":                schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProviderIngress(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngressLoadBalancer":    schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProviderIngressLoadBalancer(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster":                                         schema_pkg_apis_provider_v1alpha1_Cluster(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCalico":                                   schema_pkg_apis_provider_v1alpha1_ClusterCalico(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCustomer":                                 schema_pkg_apis_provider_v1alpha1_ClusterCustomer(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDocker":                                   schema_pkg_apis_provider_v1alpha1_ClusterDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDockerDaemon":                             schema_pkg_apis_provider_v1alpha1_ClusterDockerDaemon(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterEtcd":                                     schema_pkg_apis_provider_v1alpha1_ClusterEtcd(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetes":                               schema_pkg_apis_provider_v1alpha1_ClusterKubernetes(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesAPI":                            schema_pkg_apis_provider_v1alpha1_ClusterKubernetesAPI(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesDNS":                            schema_pkg_apis_provider_v1alpha1_ClusterKubernetesDNS(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressController":              schema_pkg_apis_provider_v1alpha1_ClusterKubernetesIngressController(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressControllerDocker":        schema_pkg_apis_provider_v1alpha1_ClusterKubernetesIngressControllerDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesKubelet":                        schema_pkg_apis_provider_v1alpha1_ClusterKubernetesKubelet(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetup":                   schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetup(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupDocker":             schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetupDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupKubeProxy":          schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetupKubeProxy(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSH":                            schema_pkg_apis_provider_v1alpha1_ClusterKubernetesSSH(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSHUser":                        schema_pkg_apis_provider_v1alpha1_ClusterKubernetesSSHUser(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterNode":                                     schema_pkg_apis_provider_v1alpha1_ClusterNode(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterScaling":                                  schema_pkg_apis_provider_v1alpha1_ClusterScaling(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.CredentialSecret":                                schema_pkg_apis_provider_v1alpha1_CredentialSecret(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfig":                                       schema_pkg_apis_provider_v1alpha1_KVMConfig(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigList":                                   schema_pkg_apis_provider_v1alpha1_KVMConfigList(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpec":                                   schema_pkg_apis_provider_v1alpha1_KVMConfigSpec(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVM":                                schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVM(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdater":                 schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMEndpointUpdater(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdaterDocker":           schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMEndpointUpdaterDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVM":                          schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMK8sKVM(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVMDocker":                    schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMK8sKVMDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetwork":                         schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNetwork(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetworkFlannel":                  schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNetworkFlannel(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNode":                            schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNode(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeController":                  schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNodeController(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeControllerDocker":            schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNodeControllerDocker(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMPortMappings":                    schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMPortMappings(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecVersionBundle":                      schema_pkg_apis_provider_v1alpha1_KVMConfigSpecVersionBundle(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatus":                                 schema_pkg_apis_provider_v1alpha1_KVMConfigStatus(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatusKVM":                              schema_pkg_apis_provider_v1alpha1_KVMConfigStatusKVM(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster":                                   schema_pkg_apis_provider_v1alpha1_StatusCluster(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterCondition":                          schema_pkg_apis_provider_v1alpha1_StatusClusterCondition(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNetwork":                            schema_pkg_apis_provider_v1alpha1_StatusClusterNetwork(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNode":                               schema_pkg_apis_provider_v1alpha1_StatusClusterNode(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResource":                           schema_pkg_apis_provider_v1alpha1_StatusClusterResource(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResourceCondition":                  schema_pkg_apis_provider_v1alpha1_StatusClusterResourceCondition(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterScaling":                            schema_pkg_apis_provider_v1alpha1_StatusClusterScaling(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterVersion":                            schema_pkg_apis_provider_v1alpha1_StatusClusterVersion(ref),
-		"github.com/giantswarm/apiextensions/v3/pkg/serialization.Float":                                                    schema_apiextensions_v3_pkg_serialization_Float(ref),
-		"k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource":                                                               schema_k8sio_api_core_v1_AWSElasticBlockStoreVolumeSource(ref),
-		"k8s.io/api/core/v1.Affinity":                                    schema_k8sio_api_core_v1_Affinity(ref),
-		"k8s.io/api/core/v1.AttachedVolume":                              schema_k8sio_api_core_v1_AttachedVolume(ref),
-		"k8s.io/api/core/v1.AvoidPods":                                   schema_k8sio_api_core_v1_AvoidPods(ref),
-		"k8s.io/api/core/v1.AzureDiskVolumeSource":                       schema_k8sio_api_core_v1_AzureDiskVolumeSource(ref),
-		"k8s.io/api/core/v1.AzureFilePersistentVolumeSource":             schema_k8sio_api_core_v1_AzureFilePersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.AzureFileVolumeSource":                       schema_k8sio_api_core_v1_AzureFileVolumeSource(ref),
-		"k8s.io/api/core/v1.Binding":                                     schema_k8sio_api_core_v1_Binding(ref),
-		"k8s.io/api/core/v1.CSIPersistentVolumeSource":                   schema_k8sio_api_core_v1_CSIPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.CSIVolumeSource":                             schema_k8sio_api_core_v1_CSIVolumeSource(ref),
-		"k8s.io/api/core/v1.Capabilities":                                schema_k8sio_api_core_v1_Capabilities(ref),
-		"k8s.io/api/core/v1.CephFSPersistentVolumeSource":                schema_k8sio_api_core_v1_CephFSPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.CephFSVolumeSource":                          schema_k8sio_api_core_v1_CephFSVolumeSource(ref),
-		"k8s.io/api/core/v1.CinderPersistentVolumeSource":                schema_k8sio_api_core_v1_CinderPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.CinderVolumeSource":                          schema_k8sio_api_core_v1_CinderVolumeSource(ref),
-		"k8s.io/api/core/v1.ClientIPConfig":                              schema_k8sio_api_core_v1_ClientIPConfig(ref),
-		"k8s.io/api/core/v1.ComponentCondition":                          schema_k8sio_api_core_v1_ComponentCondition(ref),
-		"k8s.io/api/core/v1.ComponentStatus":                             schema_k8sio_api_core_v1_ComponentStatus(ref),
-		"k8s.io/api/core/v1.ComponentStatusList":                         schema_k8sio_api_core_v1_ComponentStatusList(ref),
-		"k8s.io/api/core/v1.ConfigMap":                                   schema_k8sio_api_core_v1_ConfigMap(ref),
-		"k8s.io/api/core/v1.ConfigMapEnvSource":                          schema_k8sio_api_core_v1_ConfigMapEnvSource(ref),
-		"k8s.io/api/core/v1.ConfigMapKeySelector":                        schema_k8sio_api_core_v1_ConfigMapKeySelector(ref),
-		"k8s.io/api/core/v1.ConfigMapList":                               schema_k8sio_api_core_v1_ConfigMapList(ref),
-		"k8s.io/api/core/v1.ConfigMapNodeConfigSource":                   schema_k8sio_api_core_v1_ConfigMapNodeConfigSource(ref),
-		"k8s.io/api/core/v1.ConfigMapProjection":                         schema_k8sio_api_core_v1_ConfigMapProjection(ref),
-		"k8s.io/api/core/v1.ConfigMapVolumeSource":                       schema_k8sio_api_core_v1_ConfigMapVolumeSource(ref),
-		"k8s.io/api/core/v1.Container":                                   schema_k8sio_api_core_v1_Container(ref),
-		"k8s.io/api/core/v1.ContainerImage":                              schema_k8sio_api_core_v1_ContainerImage(ref),
-		"k8s.io/api/core/v1.ContainerPort":                               schema_k8sio_api_core_v1_ContainerPort(ref),
-		"k8s.io/api/core/v1.ContainerState":                              schema_k8sio_api_core_v1_ContainerState(ref),
-		"k8s.io/api/core/v1.ContainerStateRunning":                       schema_k8sio_api_core_v1_ContainerStateRunning(ref),
-		"k8s.io/api/core/v1.ContainerStateTerminated":                    schema_k8sio_api_core_v1_ContainerStateTerminated(ref),
-		"k8s.io/api/core/v1.ContainerStateWaiting":                       schema_k8sio_api_core_v1_ContainerStateWaiting(ref),
-		"k8s.io/api/core/v1.ContainerStatus":                             schema_k8sio_api_core_v1_ContainerStatus(ref),
-		"k8s.io/api/core/v1.DaemonEndpoint":                              schema_k8sio_api_core_v1_DaemonEndpoint(ref),
-		"k8s.io/api/core/v1.DownwardAPIProjection":                       schema_k8sio_api_core_v1_DownwardAPIProjection(ref),
-		"k8s.io/api/core/v1.DownwardAPIVolumeFile":                       schema_k8sio_api_core_v1_DownwardAPIVolumeFile(ref),
-		"k8s.io/api/core/v1.DownwardAPIVolumeSource":                     schema_k8sio_api_core_v1_DownwardAPIVolumeSource(ref),
-		"k8s.io/api/core/v1.EmptyDirVolumeSource":                        schema_k8sio_api_core_v1_EmptyDirVolumeSource(ref),
-		"k8s.io/api/core/v1.EndpointAddress":                             schema_k8sio_api_core_v1_EndpointAddress(ref),
-		"k8s.io/api/core/v1.EndpointPort":                                schema_k8sio_api_core_v1_EndpointPort(ref),
-		"k8s.io/api/core/v1.EndpointSubset":                              schema_k8sio_api_core_v1_EndpointSubset(ref),
-		"k8s.io/api/core/v1.Endpoints":                                   schema_k8sio_api_core_v1_Endpoints(ref),
-		"k8s.io/api/core/v1.EndpointsList":                               schema_k8sio_api_core_v1_EndpointsList(ref),
-		"k8s.io/api/core/v1.EnvFromSource":                               schema_k8sio_api_core_v1_EnvFromSource(ref),
-		"k8s.io/api/core/v1.EnvVar":                                      schema_k8sio_api_core_v1_EnvVar(ref),
-		"k8s.io/api/core/v1.EnvVarSource":                                schema_k8sio_api_core_v1_EnvVarSource(ref),
-		"k8s.io/api/core/v1.EphemeralContainer":                          schema_k8sio_api_core_v1_EphemeralContainer(ref),
-		"k8s.io/api/core/v1.EphemeralContainerCommon":                    schema_k8sio_api_core_v1_EphemeralContainerCommon(ref),
-		"k8s.io/api/core/v1.EphemeralContainers":                         schema_k8sio_api_core_v1_EphemeralContainers(ref),
-		"k8s.io/api/core/v1.Event":                                       schema_k8sio_api_core_v1_Event(ref),
-		"k8s.io/api/core/v1.EventList":                                   schema_k8sio_api_core_v1_EventList(ref),
-		"k8s.io/api/core/v1.EventSeries":                                 schema_k8sio_api_core_v1_EventSeries(ref),
-		"k8s.io/api/core/v1.EventSource":                                 schema_k8sio_api_core_v1_EventSource(ref),
-		"k8s.io/api/core/v1.ExecAction":                                  schema_k8sio_api_core_v1_ExecAction(ref),
-		"k8s.io/api/core/v1.FCVolumeSource":                              schema_k8sio_api_core_v1_FCVolumeSource(ref),
-		"k8s.io/api/core/v1.FlexPersistentVolumeSource":                  schema_k8sio_api_core_v1_FlexPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.FlexVolumeSource":                            schema_k8sio_api_core_v1_FlexVolumeSource(ref),
-		"k8s.io/api/core/v1.FlockerVolumeSource":                         schema_k8sio_api_core_v1_FlockerVolumeSource(ref),
-		"k8s.io/api/core/v1.GCEPersistentDiskVolumeSource":               schema_k8sio_api_core_v1_GCEPersistentDiskVolumeSource(ref),
-		"k8s.io/api/core/v1.GitRepoVolumeSource":                         schema_k8sio_api_core_v1_GitRepoVolumeSource(ref),
-		"k8s.io/api/core/v1.GlusterfsPersistentVolumeSource":             schema_k8sio_api_core_v1_GlusterfsPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.GlusterfsVolumeSource":                       schema_k8sio_api_core_v1_GlusterfsVolumeSource(ref),
-		"k8s.io/api/core/v1.HTTPGetAction":                               schema_k8sio_api_core_v1_HTTPGetAction(ref),
-		"k8s.io/api/core/v1.HTTPHeader":                                  schema_k8sio_api_core_v1_HTTPHeader(ref),
-		"k8s.io/api/core/v1.Handler":                                     schema_k8sio_api_core_v1_Handler(ref),
-		"k8s.io/api/core/v1.HostAlias":                                   schema_k8sio_api_core_v1_HostAlias(ref),
-		"k8s.io/api/core/v1.HostPathVolumeSource":                        schema_k8sio_api_core_v1_HostPathVolumeSource(ref),
-		"k8s.io/api/core/v1.ISCSIPersistentVolumeSource":                 schema_k8sio_api_core_v1_ISCSIPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.ISCSIVolumeSource":                           schema_k8sio_api_core_v1_ISCSIVolumeSource(ref),
-		"k8s.io/api/core/v1.KeyToPath":                                   schema_k8sio_api_core_v1_KeyToPath(ref),
-		"k8s.io/api/core/v1.Lifecycle":                                   schema_k8sio_api_core_v1_Lifecycle(ref),
-		"k8s.io/api/core/v1.LimitRange":                                  schema_k8sio_api_core_v1_LimitRange(ref),
-		"k8s.io/api/core/v1.LimitRangeItem":                              schema_k8sio_api_core_v1_LimitRangeItem(ref),
-		"k8s.io/api/core/v1.LimitRangeList":                              schema_k8sio_api_core_v1_LimitRangeList(ref),
-		"k8s.io/api/core/v1.LimitRangeSpec":                              schema_k8sio_api_core_v1_LimitRangeSpec(ref),
-		"k8s.io/api/core/v1.List":                                        schema_k8sio_api_core_v1_List(ref),
-		"k8s.io/api/core/v1.LoadBalancerIngress":                         schema_k8sio_api_core_v1_LoadBalancerIngress(ref),
-		"k8s.io/api/core/v1.LoadBalancerStatus":                          schema_k8sio_api_core_v1_LoadBalancerStatus(ref),
-		"k8s.io/api/core/v1.LocalObjectReference":                        schema_k8sio_api_core_v1_LocalObjectReference(ref),
-		"k8s.io/api/core/v1.LocalVolumeSource":                           schema_k8sio_api_core_v1_LocalVolumeSource(ref),
-		"k8s.io/api/core/v1.NFSVolumeSource":                             schema_k8sio_api_core_v1_NFSVolumeSource(ref),
-		"k8s.io/api/core/v1.Namespace":                                   schema_k8sio_api_core_v1_Namespace(ref),
-		"k8s.io/api/core/v1.NamespaceCondition":                          schema_k8sio_api_core_v1_NamespaceCondition(ref),
-		"k8s.io/api/core/v1.NamespaceList":                               schema_k8sio_api_core_v1_NamespaceList(ref),
-		"k8s.io/api/core/v1.NamespaceSpec":                               schema_k8sio_api_core_v1_NamespaceSpec(ref),
-		"k8s.io/api/core/v1.NamespaceStatus":                             schema_k8sio_api_core_v1_NamespaceStatus(ref),
-		"k8s.io/api/core/v1.Node":                                        schema_k8sio_api_core_v1_Node(ref),
-		"k8s.io/api/core/v1.NodeAddress":                                 schema_k8sio_api_core_v1_NodeAddress(ref),
-		"k8s.io/api/core/v1.NodeAffinity":                                schema_k8sio_api_core_v1_NodeAffinity(ref),
-		"k8s.io/api/core/v1.NodeCondition":                               schema_k8sio_api_core_v1_NodeCondition(ref),
-		"k8s.io/api/core/v1.NodeConfigSource":                            schema_k8sio_api_core_v1_NodeConfigSource(ref),
-		"k8s.io/api/core/v1.NodeConfigStatus":                            schema_k8sio_api_core_v1_NodeConfigStatus(ref),
-		"k8s.io/api/core/v1.NodeDaemonEndpoints":                         schema_k8sio_api_core_v1_NodeDaemonEndpoints(ref),
-		"k8s.io/api/core/v1.NodeList":                                    schema_k8sio_api_core_v1_NodeList(ref),
-		"k8s.io/api/core/v1.NodeProxyOptions":                            schema_k8sio_api_core_v1_NodeProxyOptions(ref),
-		"k8s.io/api/core/v1.NodeResources":                               schema_k8sio_api_core_v1_NodeResources(ref),
-		"k8s.io/api/core/v1.NodeSelector":                                schema_k8sio_api_core_v1_NodeSelector(ref),
-		"k8s.io/api/core/v1.NodeSelectorRequirement":                     schema_k8sio_api_core_v1_NodeSelectorRequirement(ref),
-		"k8s.io/api/core/v1.NodeSelectorTerm":                            schema_k8sio_api_core_v1_NodeSelectorTerm(ref),
-		"k8s.io/api/core/v1.NodeSpec":                                    schema_k8sio_api_core_v1_NodeSpec(ref),
-		"k8s.io/api/core/v1.NodeStatus":                                  schema_k8sio_api_core_v1_NodeStatus(ref),
-		"k8s.io/api/core/v1.NodeSystemInfo":                              schema_k8sio_api_core_v1_NodeSystemInfo(ref),
-		"k8s.io/api/core/v1.ObjectFieldSelector":                         schema_k8sio_api_core_v1_ObjectFieldSelector(ref),
-		"k8s.io/api/core/v1.ObjectReference":                             schema_k8sio_api_core_v1_ObjectReference(ref),
-		"k8s.io/api/core/v1.PersistentVolume":                            schema_k8sio_api_core_v1_PersistentVolume(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaim":                       schema_k8sio_api_core_v1_PersistentVolumeClaim(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaimCondition":              schema_k8sio_api_core_v1_PersistentVolumeClaimCondition(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaimList":                   schema_k8sio_api_core_v1_PersistentVolumeClaimList(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaimSpec":                   schema_k8sio_api_core_v1_PersistentVolumeClaimSpec(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaimStatus":                 schema_k8sio_api_core_v1_PersistentVolumeClaimStatus(ref),
-		"k8s.io/api/core/v1.PersistentVolumeClaimVolumeSource":           schema_k8sio_api_core_v1_PersistentVolumeClaimVolumeSource(ref),
-		"k8s.io/api/core/v1.PersistentVolumeList":                        schema_k8sio_api_core_v1_PersistentVolumeList(ref),
-		"k8s.io/api/core/v1.PersistentVolumeSource":                      schema_k8sio_api_core_v1_PersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.PersistentVolumeSpec":                        schema_k8sio_api_core_v1_PersistentVolumeSpec(ref),
-		"k8s.io/api/core/v1.PersistentVolumeStatus":                      schema_k8sio_api_core_v1_PersistentVolumeStatus(ref),
-		"k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource":            schema_k8sio_api_core_v1_PhotonPersistentDiskVolumeSource(ref),
-		"k8s.io/api/core/v1.Pod":                                         schema_k8sio_api_core_v1_Pod(ref),
-		"k8s.io/api/core/v1.PodAffinity":                                 schema_k8sio_api_core_v1_PodAffinity(ref),
-		"k8s.io/api/core/v1.PodAffinityTerm":                             schema_k8sio_api_core_v1_PodAffinityTerm(ref),
-		"k8s.io/api/core/v1.PodAntiAffinity":                             schema_k8sio_api_core_v1_PodAntiAffinity(ref),
-		"k8s.io/api/core/v1.PodAttachOptions":                            schema_k8sio_api_core_v1_PodAttachOptions(ref),
-		"k8s.io/api/core/v1.PodCondition":                                schema_k8sio_api_core_v1_PodCondition(ref),
-		"k8s.io/api/core/v1.PodDNSConfig":                                schema_k8sio_api_core_v1_PodDNSConfig(ref),
-		"k8s.io/api/core/v1.PodDNSConfigOption":                          schema_k8sio_api_core_v1_PodDNSConfigOption(ref),
-		"k8s.io/api/core/v1.PodExecOptions":                              schema_k8sio_api_core_v1_PodExecOptions(ref),
-		"k8s.io/api/core/v1.PodIP":                                       schema_k8sio_api_core_v1_PodIP(ref),
-		"k8s.io/api/core/v1.PodList":                                     schema_k8sio_api_core_v1_PodList(ref),
-		"k8s.io/api/core/v1.PodLogOptions":                               schema_k8sio_api_core_v1_PodLogOptions(ref),
-		"k8s.io/api/core/v1.PodPortForwardOptions":                       schema_k8sio_api_core_v1_PodPortForwardOptions(ref),
-		"k8s.io/api/core/v1.PodProxyOptions":                             schema_k8sio_api_core_v1_PodProxyOptions(ref),
-		"k8s.io/api/core/v1.PodReadinessGate":                            schema_k8sio_api_core_v1_PodReadinessGate(ref),
-		"k8s.io/api/core/v1.PodSecurityContext":                          schema_k8sio_api_core_v1_PodSecurityContext(ref),
-		"k8s.io/api/core/v1.PodSignature":                                schema_k8sio_api_core_v1_PodSignature(ref),
-		"k8s.io/api/core/v1.PodSpec":                                     schema_k8sio_api_core_v1_PodSpec(ref),
-		"k8s.io/api/core/v1.PodStatus":                                   schema_k8sio_api_core_v1_PodStatus(ref),
-		"k8s.io/api/core/v1.PodStatusResult":                             schema_k8sio_api_core_v1_PodStatusResult(ref),
-		"k8s.io/api/core/v1.PodTemplate":                                 schema_k8sio_api_core_v1_PodTemplate(ref),
-		"k8s.io/api/core/v1.PodTemplateList":                             schema_k8sio_api_core_v1_PodTemplateList(ref),
-		"k8s.io/api/core/v1.PodTemplateSpec":                             schema_k8sio_api_core_v1_PodTemplateSpec(ref),
-		"k8s.io/api/core/v1.PortworxVolumeSource":                        schema_k8sio_api_core_v1_PortworxVolumeSource(ref),
-		"k8s.io/api/core/v1.PreferAvoidPodsEntry":                        schema_k8sio_api_core_v1_PreferAvoidPodsEntry(ref),
-		"k8s.io/api/core/v1.PreferredSchedulingTerm":                     schema_k8sio_api_core_v1_PreferredSchedulingTerm(ref),
-		"k8s.io/api/core/v1.Probe":                                       schema_k8sio_api_core_v1_Probe(ref),
-		"k8s.io/api/core/v1.ProjectedVolumeSource":                       schema_k8sio_api_core_v1_ProjectedVolumeSource(ref),
-		"k8s.io/api/core/v1.QuobyteVolumeSource":                         schema_k8sio_api_core_v1_QuobyteVolumeSource(ref),
-		"k8s.io/api/core/v1.RBDPersistentVolumeSource":                   schema_k8sio_api_core_v1_RBDPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.RBDVolumeSource":                             schema_k8sio_api_core_v1_RBDVolumeSource(ref),
-		"k8s.io/api/core/v1.RangeAllocation":                             schema_k8sio_api_core_v1_RangeAllocation(ref),
-		"k8s.io/api/core/v1.ReplicationController":                       schema_k8sio_api_core_v1_ReplicationController(ref),
-		"k8s.io/api/core/v1.ReplicationControllerCondition":              schema_k8sio_api_core_v1_ReplicationControllerCondition(ref),
-		"k8s.io/api/core/v1.ReplicationControllerList":                   schema_k8sio_api_core_v1_ReplicationControllerList(ref),
-		"k8s.io/api/core/v1.ReplicationControllerSpec":                   schema_k8sio_api_core_v1_ReplicationControllerSpec(ref),
-		"k8s.io/api/core/v1.ReplicationControllerStatus":                 schema_k8sio_api_core_v1_ReplicationControllerStatus(ref),
-		"k8s.io/api/core/v1.ResourceFieldSelector":                       schema_k8sio_api_core_v1_ResourceFieldSelector(ref),
-		"k8s.io/api/core/v1.ResourceQuota":                               schema_k8sio_api_core_v1_ResourceQuota(ref),
-		"k8s.io/api/core/v1.ResourceQuotaList":                           schema_k8sio_api_core_v1_ResourceQuotaList(ref),
-		"k8s.io/api/core/v1.ResourceQuotaSpec":                           schema_k8sio_api_core_v1_ResourceQuotaSpec(ref),
-		"k8s.io/api/core/v1.ResourceQuotaStatus":                         schema_k8sio_api_core_v1_ResourceQuotaStatus(ref),
-		"k8s.io/api/core/v1.ResourceRequirements":                        schema_k8sio_api_core_v1_ResourceRequirements(ref),
-		"k8s.io/api/core/v1.SELinuxOptions":                              schema_k8sio_api_core_v1_SELinuxOptions(ref),
-		"k8s.io/api/core/v1.ScaleIOPersistentVolumeSource":               schema_k8sio_api_core_v1_ScaleIOPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.ScaleIOVolumeSource":                         schema_k8sio_api_core_v1_ScaleIOVolumeSource(ref),
-		"k8s.io/api/core/v1.ScopeSelector":                               schema_k8sio_api_core_v1_ScopeSelector(ref),
-		"k8s.io/api/core/v1.ScopedResourceSelectorRequirement":           schema_k8sio_api_core_v1_ScopedResourceSelectorRequirement(ref),
-		"k8s.io/api/core/v1.Secret":                                      schema_k8sio_api_core_v1_Secret(ref),
-		"k8s.io/api/core/v1.SecretEnvSource":                             schema_k8sio_api_core_v1_SecretEnvSource(ref),
-		"k8s.io/api/core/v1.SecretKeySelector":                           schema_k8sio_api_core_v1_SecretKeySelector(ref),
-		"k8s.io/api/core/v1.SecretList":                                  schema_k8sio_api_core_v1_SecretList(ref),
-		"k8s.io/api/core/v1.SecretProjection":                            schema_k8sio_api_core_v1_SecretProjection(ref),
-		"k8s.io/api/core/v1.SecretReference":                             schema_k8sio_api_core_v1_SecretReference(ref),
-		"k8s.io/api/core/v1.SecretVolumeSource":                          schema_k8sio_api_core_v1_SecretVolumeSource(ref),
-		"k8s.io/api/core/v1.SecurityContext":                             schema_k8sio_api_core_v1_SecurityContext(ref),
-		"k8s.io/api/core/v1.SerializedReference":                         schema_k8sio_api_core_v1_SerializedReference(ref),
-		"k8s.io/api/core/v1.Service":                                     schema_k8sio_api_core_v1_Service(ref),
-		"k8s.io/api/core/v1.ServiceAccount":                              schema_k8sio_api_core_v1_ServiceAccount(ref),
-		"k8s.io/api/core/v1.ServiceAccountList":                          schema_k8sio_api_core_v1_ServiceAccountList(ref),
-		"k8s.io/api/core/v1.ServiceAccountTokenProjection":               schema_k8sio_api_core_v1_ServiceAccountTokenProjection(ref),
-		"k8s.io/api/core/v1.ServiceList":                                 schema_k8sio_api_core_v1_ServiceList(ref),
-		"k8s.io/api/core/v1.ServicePort":                                 schema_k8sio_api_core_v1_ServicePort(ref),
-		"k8s.io/api/core/v1.ServiceProxyOptions":                         schema_k8sio_api_core_v1_ServiceProxyOptions(ref),
-		"k8s.io/api/core/v1.ServiceSpec":                                 schema_k8sio_api_core_v1_ServiceSpec(ref),
-		"k8s.io/api/core/v1.ServiceStatus":                               schema_k8sio_api_core_v1_ServiceStatus(ref),
-		"k8s.io/api/core/v1.SessionAffinityConfig":                       schema_k8sio_api_core_v1_SessionAffinityConfig(ref),
-		"k8s.io/api/core/v1.StorageOSPersistentVolumeSource":             schema_k8sio_api_core_v1_StorageOSPersistentVolumeSource(ref),
-		"k8s.io/api/core/v1.StorageOSVolumeSource":                       schema_k8sio_api_core_v1_StorageOSVolumeSource(ref),
-		"k8s.io/api/core/v1.Sysctl":                                      schema_k8sio_api_core_v1_Sysctl(ref),
-		"k8s.io/api/core/v1.TCPSocketAction":                             schema_k8sio_api_core_v1_TCPSocketAction(ref),
-		"k8s.io/api/core/v1.Taint":                                       schema_k8sio_api_core_v1_Taint(ref),
-		"k8s.io/api/core/v1.Toleration":                                  schema_k8sio_api_core_v1_Toleration(ref),
-		"k8s.io/api/core/v1.TopologySelectorLabelRequirement":            schema_k8sio_api_core_v1_TopologySelectorLabelRequirement(ref),
-		"k8s.io/api/core/v1.TopologySelectorTerm":                        schema_k8sio_api_core_v1_TopologySelectorTerm(ref),
-		"k8s.io/api/core/v1.TopologySpreadConstraint":                    schema_k8sio_api_core_v1_TopologySpreadConstraint(ref),
-		"k8s.io/api/core/v1.TypedLocalObjectReference":                   schema_k8sio_api_core_v1_TypedLocalObjectReference(ref),
-		"k8s.io/api/core/v1.Volume":                                      schema_k8sio_api_core_v1_Volume(ref),
-		"k8s.io/api/core/v1.VolumeDevice":                                schema_k8sio_api_core_v1_VolumeDevice(ref),
-		"k8s.io/api/core/v1.VolumeMount":                                 schema_k8sio_api_core_v1_VolumeMount(ref),
-		"k8s.io/api/core/v1.VolumeNodeAffinity":                          schema_k8sio_api_core_v1_VolumeNodeAffinity(ref),
-		"k8s.io/api/core/v1.VolumeProjection":                            schema_k8sio_api_core_v1_VolumeProjection(ref),
-		"k8s.io/api/core/v1.VolumeSource":                                schema_k8sio_api_core_v1_VolumeSource(ref),
-		"k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource":              schema_k8sio_api_core_v1_VsphereVirtualDiskVolumeSource(ref),
-		"k8s.io/api/core/v1.WeightedPodAffinityTerm":                     schema_k8sio_api_core_v1_WeightedPodAffinityTerm(ref),
-		"k8s.io/api/core/v1.WindowsSecurityContextOptions":               schema_k8sio_api_core_v1_WindowsSecurityContextOptions(ref),
-		"k8s.io/apimachinery/pkg/api/resource.Quantity":                  schema_apimachinery_pkg_api_resource_Quantity(ref),
-		"k8s.io/apimachinery/pkg/api/resource.int64Amount":               schema_apimachinery_pkg_api_resource_int64Amount(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                  schema_pkg_apis_meta_v1_APIGroup(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":              schema_pkg_apis_meta_v1_APIGroupList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":               schema_pkg_apis_meta_v1_APIResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":           schema_pkg_apis_meta_v1_APIResourceList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":               schema_pkg_apis_meta_v1_APIVersions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":             schema_pkg_apis_meta_v1_CreateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":             schema_pkg_apis_meta_v1_DeleteOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                  schema_pkg_apis_meta_v1_Duration(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions":             schema_pkg_apis_meta_v1_ExportOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1":                  schema_pkg_apis_meta_v1_FieldsV1(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                schema_pkg_apis_meta_v1_GetOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                 schema_pkg_apis_meta_v1_GroupKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":             schema_pkg_apis_meta_v1_GroupResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":              schema_pkg_apis_meta_v1_GroupVersion(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":  schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":          schema_pkg_apis_meta_v1_GroupVersionKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":      schema_pkg_apis_meta_v1_GroupVersionResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":             schema_pkg_apis_meta_v1_InternalEvent(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":             schema_pkg_apis_meta_v1_LabelSelector(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":  schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                      schema_pkg_apis_meta_v1_List(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                  schema_pkg_apis_meta_v1_ListMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":               schema_pkg_apis_meta_v1_ListOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":        schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                 schema_pkg_apis_meta_v1_MicroTime(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                schema_pkg_apis_meta_v1_ObjectMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":            schema_pkg_apis_meta_v1_OwnerReference(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":     schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList": schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                     schema_pkg_apis_meta_v1_Patch(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":              schema_pkg_apis_meta_v1_PatchOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":             schema_pkg_apis_meta_v1_Preconditions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                 schema_pkg_apis_meta_v1_RootPaths(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR": schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                    schema_pkg_apis_meta_v1_Status(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":               schema_pkg_apis_meta_v1_StatusCause(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":             schema_pkg_apis_meta_v1_StatusDetails(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                     schema_pkg_apis_meta_v1_Table(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":     schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":              schema_pkg_apis_meta_v1_TableOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                  schema_pkg_apis_meta_v1_TableRow(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":         schema_pkg_apis_meta_v1_TableRowCondition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                      schema_pkg_apis_meta_v1_Time(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                 schema_pkg_apis_meta_v1_Timestamp(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                  schema_pkg_apis_meta_v1_TypeMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":             schema_pkg_apis_meta_v1_UpdateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                schema_pkg_apis_meta_v1_WatchEvent(ref),
-		"k8s.io/apimachinery/pkg/runtime.RawExtension":                   schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref),
-		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                       schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
-		"k8s.io/apimachinery/pkg/runtime.Unknown":                        schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
-		"k8s.io/apimachinery/pkg/version.Info":                           schema_k8sio_apimachinery_pkg_version_Info(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Matcher":     schema_pkg_apis_monitoring_v1alpha1_Matcher(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Silence":     schema_pkg_apis_monitoring_v1alpha1_Silence(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.SilenceList": schema_pkg_apis_monitoring_v1alpha1_SilenceList(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.SilenceSpec": schema_pkg_apis_monitoring_v1alpha1_SilenceSpec(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.TargetTag":   schema_pkg_apis_monitoring_v1alpha1_TargetTag(ref),
+		"github.com/giantswarm/apiextensions/v3/pkg/serialization.Float":                  schema_apiextensions_v3_pkg_serialization_Float(ref),
+		"k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource":                             schema_k8sio_api_core_v1_AWSElasticBlockStoreVolumeSource(ref),
+		"k8s.io/api/core/v1.Affinity":                                                     schema_k8sio_api_core_v1_Affinity(ref),
+		"k8s.io/api/core/v1.AttachedVolume":                                               schema_k8sio_api_core_v1_AttachedVolume(ref),
+		"k8s.io/api/core/v1.AvoidPods":                                                    schema_k8sio_api_core_v1_AvoidPods(ref),
+		"k8s.io/api/core/v1.AzureDiskVolumeSource":                                        schema_k8sio_api_core_v1_AzureDiskVolumeSource(ref),
+		"k8s.io/api/core/v1.AzureFilePersistentVolumeSource":                              schema_k8sio_api_core_v1_AzureFilePersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.AzureFileVolumeSource":                                        schema_k8sio_api_core_v1_AzureFileVolumeSource(ref),
+		"k8s.io/api/core/v1.Binding":                                                      schema_k8sio_api_core_v1_Binding(ref),
+		"k8s.io/api/core/v1.CSIPersistentVolumeSource":                                    schema_k8sio_api_core_v1_CSIPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.CSIVolumeSource":                                              schema_k8sio_api_core_v1_CSIVolumeSource(ref),
+		"k8s.io/api/core/v1.Capabilities":                                                 schema_k8sio_api_core_v1_Capabilities(ref),
+		"k8s.io/api/core/v1.CephFSPersistentVolumeSource":                                 schema_k8sio_api_core_v1_CephFSPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.CephFSVolumeSource":                                           schema_k8sio_api_core_v1_CephFSVolumeSource(ref),
+		"k8s.io/api/core/v1.CinderPersistentVolumeSource":                                 schema_k8sio_api_core_v1_CinderPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.CinderVolumeSource":                                           schema_k8sio_api_core_v1_CinderVolumeSource(ref),
+		"k8s.io/api/core/v1.ClientIPConfig":                                               schema_k8sio_api_core_v1_ClientIPConfig(ref),
+		"k8s.io/api/core/v1.ComponentCondition":                                           schema_k8sio_api_core_v1_ComponentCondition(ref),
+		"k8s.io/api/core/v1.ComponentStatus":                                              schema_k8sio_api_core_v1_ComponentStatus(ref),
+		"k8s.io/api/core/v1.ComponentStatusList":                                          schema_k8sio_api_core_v1_ComponentStatusList(ref),
+		"k8s.io/api/core/v1.ConfigMap":                                                    schema_k8sio_api_core_v1_ConfigMap(ref),
+		"k8s.io/api/core/v1.ConfigMapEnvSource":                                           schema_k8sio_api_core_v1_ConfigMapEnvSource(ref),
+		"k8s.io/api/core/v1.ConfigMapKeySelector":                                         schema_k8sio_api_core_v1_ConfigMapKeySelector(ref),
+		"k8s.io/api/core/v1.ConfigMapList":                                                schema_k8sio_api_core_v1_ConfigMapList(ref),
+		"k8s.io/api/core/v1.ConfigMapNodeConfigSource":                                    schema_k8sio_api_core_v1_ConfigMapNodeConfigSource(ref),
+		"k8s.io/api/core/v1.ConfigMapProjection":                                          schema_k8sio_api_core_v1_ConfigMapProjection(ref),
+		"k8s.io/api/core/v1.ConfigMapVolumeSource":                                        schema_k8sio_api_core_v1_ConfigMapVolumeSource(ref),
+		"k8s.io/api/core/v1.Container":                                                    schema_k8sio_api_core_v1_Container(ref),
+		"k8s.io/api/core/v1.ContainerImage":                                               schema_k8sio_api_core_v1_ContainerImage(ref),
+		"k8s.io/api/core/v1.ContainerPort":                                                schema_k8sio_api_core_v1_ContainerPort(ref),
+		"k8s.io/api/core/v1.ContainerState":                                               schema_k8sio_api_core_v1_ContainerState(ref),
+		"k8s.io/api/core/v1.ContainerStateRunning":                                        schema_k8sio_api_core_v1_ContainerStateRunning(ref),
+		"k8s.io/api/core/v1.ContainerStateTerminated":                                     schema_k8sio_api_core_v1_ContainerStateTerminated(ref),
+		"k8s.io/api/core/v1.ContainerStateWaiting":                                        schema_k8sio_api_core_v1_ContainerStateWaiting(ref),
+		"k8s.io/api/core/v1.ContainerStatus":                                              schema_k8sio_api_core_v1_ContainerStatus(ref),
+		"k8s.io/api/core/v1.DaemonEndpoint":                                               schema_k8sio_api_core_v1_DaemonEndpoint(ref),
+		"k8s.io/api/core/v1.DownwardAPIProjection":                                        schema_k8sio_api_core_v1_DownwardAPIProjection(ref),
+		"k8s.io/api/core/v1.DownwardAPIVolumeFile":                                        schema_k8sio_api_core_v1_DownwardAPIVolumeFile(ref),
+		"k8s.io/api/core/v1.DownwardAPIVolumeSource":                                      schema_k8sio_api_core_v1_DownwardAPIVolumeSource(ref),
+		"k8s.io/api/core/v1.EmptyDirVolumeSource":                                         schema_k8sio_api_core_v1_EmptyDirVolumeSource(ref),
+		"k8s.io/api/core/v1.EndpointAddress":                                              schema_k8sio_api_core_v1_EndpointAddress(ref),
+		"k8s.io/api/core/v1.EndpointPort":                                                 schema_k8sio_api_core_v1_EndpointPort(ref),
+		"k8s.io/api/core/v1.EndpointSubset":                                               schema_k8sio_api_core_v1_EndpointSubset(ref),
+		"k8s.io/api/core/v1.Endpoints":                                                    schema_k8sio_api_core_v1_Endpoints(ref),
+		"k8s.io/api/core/v1.EndpointsList":                                                schema_k8sio_api_core_v1_EndpointsList(ref),
+		"k8s.io/api/core/v1.EnvFromSource":                                                schema_k8sio_api_core_v1_EnvFromSource(ref),
+		"k8s.io/api/core/v1.EnvVar":                                                       schema_k8sio_api_core_v1_EnvVar(ref),
+		"k8s.io/api/core/v1.EnvVarSource":                                                 schema_k8sio_api_core_v1_EnvVarSource(ref),
+		"k8s.io/api/core/v1.EphemeralContainer":                                           schema_k8sio_api_core_v1_EphemeralContainer(ref),
+		"k8s.io/api/core/v1.EphemeralContainerCommon":                                     schema_k8sio_api_core_v1_EphemeralContainerCommon(ref),
+		"k8s.io/api/core/v1.EphemeralContainers":                                          schema_k8sio_api_core_v1_EphemeralContainers(ref),
+		"k8s.io/api/core/v1.Event":                                                        schema_k8sio_api_core_v1_Event(ref),
+		"k8s.io/api/core/v1.EventList":                                                    schema_k8sio_api_core_v1_EventList(ref),
+		"k8s.io/api/core/v1.EventSeries":                                                  schema_k8sio_api_core_v1_EventSeries(ref),
+		"k8s.io/api/core/v1.EventSource":                                                  schema_k8sio_api_core_v1_EventSource(ref),
+		"k8s.io/api/core/v1.ExecAction":                                                   schema_k8sio_api_core_v1_ExecAction(ref),
+		"k8s.io/api/core/v1.FCVolumeSource":                                               schema_k8sio_api_core_v1_FCVolumeSource(ref),
+		"k8s.io/api/core/v1.FlexPersistentVolumeSource":                                   schema_k8sio_api_core_v1_FlexPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.FlexVolumeSource":                                             schema_k8sio_api_core_v1_FlexVolumeSource(ref),
+		"k8s.io/api/core/v1.FlockerVolumeSource":                                          schema_k8sio_api_core_v1_FlockerVolumeSource(ref),
+		"k8s.io/api/core/v1.GCEPersistentDiskVolumeSource":                                schema_k8sio_api_core_v1_GCEPersistentDiskVolumeSource(ref),
+		"k8s.io/api/core/v1.GitRepoVolumeSource":                                          schema_k8sio_api_core_v1_GitRepoVolumeSource(ref),
+		"k8s.io/api/core/v1.GlusterfsPersistentVolumeSource":                              schema_k8sio_api_core_v1_GlusterfsPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.GlusterfsVolumeSource":                                        schema_k8sio_api_core_v1_GlusterfsVolumeSource(ref),
+		"k8s.io/api/core/v1.HTTPGetAction":                                                schema_k8sio_api_core_v1_HTTPGetAction(ref),
+		"k8s.io/api/core/v1.HTTPHeader":                                                   schema_k8sio_api_core_v1_HTTPHeader(ref),
+		"k8s.io/api/core/v1.Handler":                                                      schema_k8sio_api_core_v1_Handler(ref),
+		"k8s.io/api/core/v1.HostAlias":                                                    schema_k8sio_api_core_v1_HostAlias(ref),
+		"k8s.io/api/core/v1.HostPathVolumeSource":                                         schema_k8sio_api_core_v1_HostPathVolumeSource(ref),
+		"k8s.io/api/core/v1.ISCSIPersistentVolumeSource":                                  schema_k8sio_api_core_v1_ISCSIPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.ISCSIVolumeSource":                                            schema_k8sio_api_core_v1_ISCSIVolumeSource(ref),
+		"k8s.io/api/core/v1.KeyToPath":                                                    schema_k8sio_api_core_v1_KeyToPath(ref),
+		"k8s.io/api/core/v1.Lifecycle":                                                    schema_k8sio_api_core_v1_Lifecycle(ref),
+		"k8s.io/api/core/v1.LimitRange":                                                   schema_k8sio_api_core_v1_LimitRange(ref),
+		"k8s.io/api/core/v1.LimitRangeItem":                                               schema_k8sio_api_core_v1_LimitRangeItem(ref),
+		"k8s.io/api/core/v1.LimitRangeList":                                               schema_k8sio_api_core_v1_LimitRangeList(ref),
+		"k8s.io/api/core/v1.LimitRangeSpec":                                               schema_k8sio_api_core_v1_LimitRangeSpec(ref),
+		"k8s.io/api/core/v1.List":                                                         schema_k8sio_api_core_v1_List(ref),
+		"k8s.io/api/core/v1.LoadBalancerIngress":                                          schema_k8sio_api_core_v1_LoadBalancerIngress(ref),
+		"k8s.io/api/core/v1.LoadBalancerStatus":                                           schema_k8sio_api_core_v1_LoadBalancerStatus(ref),
+		"k8s.io/api/core/v1.LocalObjectReference":                                         schema_k8sio_api_core_v1_LocalObjectReference(ref),
+		"k8s.io/api/core/v1.LocalVolumeSource":                                            schema_k8sio_api_core_v1_LocalVolumeSource(ref),
+		"k8s.io/api/core/v1.NFSVolumeSource":                                              schema_k8sio_api_core_v1_NFSVolumeSource(ref),
+		"k8s.io/api/core/v1.Namespace":                                                    schema_k8sio_api_core_v1_Namespace(ref),
+		"k8s.io/api/core/v1.NamespaceCondition":                                           schema_k8sio_api_core_v1_NamespaceCondition(ref),
+		"k8s.io/api/core/v1.NamespaceList":                                                schema_k8sio_api_core_v1_NamespaceList(ref),
+		"k8s.io/api/core/v1.NamespaceSpec":                                                schema_k8sio_api_core_v1_NamespaceSpec(ref),
+		"k8s.io/api/core/v1.NamespaceStatus":                                              schema_k8sio_api_core_v1_NamespaceStatus(ref),
+		"k8s.io/api/core/v1.Node":                                                         schema_k8sio_api_core_v1_Node(ref),
+		"k8s.io/api/core/v1.NodeAddress":                                                  schema_k8sio_api_core_v1_NodeAddress(ref),
+		"k8s.io/api/core/v1.NodeAffinity":                                                 schema_k8sio_api_core_v1_NodeAffinity(ref),
+		"k8s.io/api/core/v1.NodeCondition":                                                schema_k8sio_api_core_v1_NodeCondition(ref),
+		"k8s.io/api/core/v1.NodeConfigSource":                                             schema_k8sio_api_core_v1_NodeConfigSource(ref),
+		"k8s.io/api/core/v1.NodeConfigStatus":                                             schema_k8sio_api_core_v1_NodeConfigStatus(ref),
+		"k8s.io/api/core/v1.NodeDaemonEndpoints":                                          schema_k8sio_api_core_v1_NodeDaemonEndpoints(ref),
+		"k8s.io/api/core/v1.NodeList":                                                     schema_k8sio_api_core_v1_NodeList(ref),
+		"k8s.io/api/core/v1.NodeProxyOptions":                                             schema_k8sio_api_core_v1_NodeProxyOptions(ref),
+		"k8s.io/api/core/v1.NodeResources":                                                schema_k8sio_api_core_v1_NodeResources(ref),
+		"k8s.io/api/core/v1.NodeSelector":                                                 schema_k8sio_api_core_v1_NodeSelector(ref),
+		"k8s.io/api/core/v1.NodeSelectorRequirement":                                      schema_k8sio_api_core_v1_NodeSelectorRequirement(ref),
+		"k8s.io/api/core/v1.NodeSelectorTerm":                                             schema_k8sio_api_core_v1_NodeSelectorTerm(ref),
+		"k8s.io/api/core/v1.NodeSpec":                                                     schema_k8sio_api_core_v1_NodeSpec(ref),
+		"k8s.io/api/core/v1.NodeStatus":                                                   schema_k8sio_api_core_v1_NodeStatus(ref),
+		"k8s.io/api/core/v1.NodeSystemInfo":                                               schema_k8sio_api_core_v1_NodeSystemInfo(ref),
+		"k8s.io/api/core/v1.ObjectFieldSelector":                                          schema_k8sio_api_core_v1_ObjectFieldSelector(ref),
+		"k8s.io/api/core/v1.ObjectReference":                                              schema_k8sio_api_core_v1_ObjectReference(ref),
+		"k8s.io/api/core/v1.PersistentVolume":                                             schema_k8sio_api_core_v1_PersistentVolume(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaim":                                        schema_k8sio_api_core_v1_PersistentVolumeClaim(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaimCondition":                               schema_k8sio_api_core_v1_PersistentVolumeClaimCondition(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaimList":                                    schema_k8sio_api_core_v1_PersistentVolumeClaimList(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaimSpec":                                    schema_k8sio_api_core_v1_PersistentVolumeClaimSpec(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaimStatus":                                  schema_k8sio_api_core_v1_PersistentVolumeClaimStatus(ref),
+		"k8s.io/api/core/v1.PersistentVolumeClaimVolumeSource":                            schema_k8sio_api_core_v1_PersistentVolumeClaimVolumeSource(ref),
+		"k8s.io/api/core/v1.PersistentVolumeList":                                         schema_k8sio_api_core_v1_PersistentVolumeList(ref),
+		"k8s.io/api/core/v1.PersistentVolumeSource":                                       schema_k8sio_api_core_v1_PersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.PersistentVolumeSpec":                                         schema_k8sio_api_core_v1_PersistentVolumeSpec(ref),
+		"k8s.io/api/core/v1.PersistentVolumeStatus":                                       schema_k8sio_api_core_v1_PersistentVolumeStatus(ref),
+		"k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource":                             schema_k8sio_api_core_v1_PhotonPersistentDiskVolumeSource(ref),
+		"k8s.io/api/core/v1.Pod":                                                          schema_k8sio_api_core_v1_Pod(ref),
+		"k8s.io/api/core/v1.PodAffinity":                                                  schema_k8sio_api_core_v1_PodAffinity(ref),
+		"k8s.io/api/core/v1.PodAffinityTerm":                                              schema_k8sio_api_core_v1_PodAffinityTerm(ref),
+		"k8s.io/api/core/v1.PodAntiAffinity":                                              schema_k8sio_api_core_v1_PodAntiAffinity(ref),
+		"k8s.io/api/core/v1.PodAttachOptions":                                             schema_k8sio_api_core_v1_PodAttachOptions(ref),
+		"k8s.io/api/core/v1.PodCondition":                                                 schema_k8sio_api_core_v1_PodCondition(ref),
+		"k8s.io/api/core/v1.PodDNSConfig":                                                 schema_k8sio_api_core_v1_PodDNSConfig(ref),
+		"k8s.io/api/core/v1.PodDNSConfigOption":                                           schema_k8sio_api_core_v1_PodDNSConfigOption(ref),
+		"k8s.io/api/core/v1.PodExecOptions":                                               schema_k8sio_api_core_v1_PodExecOptions(ref),
+		"k8s.io/api/core/v1.PodIP":                                                        schema_k8sio_api_core_v1_PodIP(ref),
+		"k8s.io/api/core/v1.PodList":                                                      schema_k8sio_api_core_v1_PodList(ref),
+		"k8s.io/api/core/v1.PodLogOptions":                                                schema_k8sio_api_core_v1_PodLogOptions(ref),
+		"k8s.io/api/core/v1.PodPortForwardOptions":                                        schema_k8sio_api_core_v1_PodPortForwardOptions(ref),
+		"k8s.io/api/core/v1.PodProxyOptions":                                              schema_k8sio_api_core_v1_PodProxyOptions(ref),
+		"k8s.io/api/core/v1.PodReadinessGate":                                             schema_k8sio_api_core_v1_PodReadinessGate(ref),
+		"k8s.io/api/core/v1.PodSecurityContext":                                           schema_k8sio_api_core_v1_PodSecurityContext(ref),
+		"k8s.io/api/core/v1.PodSignature":                                                 schema_k8sio_api_core_v1_PodSignature(ref),
+		"k8s.io/api/core/v1.PodSpec":                                                      schema_k8sio_api_core_v1_PodSpec(ref),
+		"k8s.io/api/core/v1.PodStatus":                                                    schema_k8sio_api_core_v1_PodStatus(ref),
+		"k8s.io/api/core/v1.PodStatusResult":                                              schema_k8sio_api_core_v1_PodStatusResult(ref),
+		"k8s.io/api/core/v1.PodTemplate":                                                  schema_k8sio_api_core_v1_PodTemplate(ref),
+		"k8s.io/api/core/v1.PodTemplateList":                                              schema_k8sio_api_core_v1_PodTemplateList(ref),
+		"k8s.io/api/core/v1.PodTemplateSpec":                                              schema_k8sio_api_core_v1_PodTemplateSpec(ref),
+		"k8s.io/api/core/v1.PortworxVolumeSource":                                         schema_k8sio_api_core_v1_PortworxVolumeSource(ref),
+		"k8s.io/api/core/v1.PreferAvoidPodsEntry":                                         schema_k8sio_api_core_v1_PreferAvoidPodsEntry(ref),
+		"k8s.io/api/core/v1.PreferredSchedulingTerm":                                      schema_k8sio_api_core_v1_PreferredSchedulingTerm(ref),
+		"k8s.io/api/core/v1.Probe":                                                        schema_k8sio_api_core_v1_Probe(ref),
+		"k8s.io/api/core/v1.ProjectedVolumeSource":                                        schema_k8sio_api_core_v1_ProjectedVolumeSource(ref),
+		"k8s.io/api/core/v1.QuobyteVolumeSource":                                          schema_k8sio_api_core_v1_QuobyteVolumeSource(ref),
+		"k8s.io/api/core/v1.RBDPersistentVolumeSource":                                    schema_k8sio_api_core_v1_RBDPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.RBDVolumeSource":                                              schema_k8sio_api_core_v1_RBDVolumeSource(ref),
+		"k8s.io/api/core/v1.RangeAllocation":                                              schema_k8sio_api_core_v1_RangeAllocation(ref),
+		"k8s.io/api/core/v1.ReplicationController":                                        schema_k8sio_api_core_v1_ReplicationController(ref),
+		"k8s.io/api/core/v1.ReplicationControllerCondition":                               schema_k8sio_api_core_v1_ReplicationControllerCondition(ref),
+		"k8s.io/api/core/v1.ReplicationControllerList":                                    schema_k8sio_api_core_v1_ReplicationControllerList(ref),
+		"k8s.io/api/core/v1.ReplicationControllerSpec":                                    schema_k8sio_api_core_v1_ReplicationControllerSpec(ref),
+		"k8s.io/api/core/v1.ReplicationControllerStatus":                                  schema_k8sio_api_core_v1_ReplicationControllerStatus(ref),
+		"k8s.io/api/core/v1.ResourceFieldSelector":                                        schema_k8sio_api_core_v1_ResourceFieldSelector(ref),
+		"k8s.io/api/core/v1.ResourceQuota":                                                schema_k8sio_api_core_v1_ResourceQuota(ref),
+		"k8s.io/api/core/v1.ResourceQuotaList":                                            schema_k8sio_api_core_v1_ResourceQuotaList(ref),
+		"k8s.io/api/core/v1.ResourceQuotaSpec":                                            schema_k8sio_api_core_v1_ResourceQuotaSpec(ref),
+		"k8s.io/api/core/v1.ResourceQuotaStatus":                                          schema_k8sio_api_core_v1_ResourceQuotaStatus(ref),
+		"k8s.io/api/core/v1.ResourceRequirements":                                         schema_k8sio_api_core_v1_ResourceRequirements(ref),
+		"k8s.io/api/core/v1.SELinuxOptions":                                               schema_k8sio_api_core_v1_SELinuxOptions(ref),
+		"k8s.io/api/core/v1.ScaleIOPersistentVolumeSource":                                schema_k8sio_api_core_v1_ScaleIOPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.ScaleIOVolumeSource":                                          schema_k8sio_api_core_v1_ScaleIOVolumeSource(ref),
+		"k8s.io/api/core/v1.ScopeSelector":                                                schema_k8sio_api_core_v1_ScopeSelector(ref),
+		"k8s.io/api/core/v1.ScopedResourceSelectorRequirement":                            schema_k8sio_api_core_v1_ScopedResourceSelectorRequirement(ref),
+		"k8s.io/api/core/v1.Secret":                                                       schema_k8sio_api_core_v1_Secret(ref),
+		"k8s.io/api/core/v1.SecretEnvSource":                                              schema_k8sio_api_core_v1_SecretEnvSource(ref),
+		"k8s.io/api/core/v1.SecretKeySelector":                                            schema_k8sio_api_core_v1_SecretKeySelector(ref),
+		"k8s.io/api/core/v1.SecretList":                                                   schema_k8sio_api_core_v1_SecretList(ref),
+		"k8s.io/api/core/v1.SecretProjection":                                             schema_k8sio_api_core_v1_SecretProjection(ref),
+		"k8s.io/api/core/v1.SecretReference":                                              schema_k8sio_api_core_v1_SecretReference(ref),
+		"k8s.io/api/core/v1.SecretVolumeSource":                                           schema_k8sio_api_core_v1_SecretVolumeSource(ref),
+		"k8s.io/api/core/v1.SecurityContext":                                              schema_k8sio_api_core_v1_SecurityContext(ref),
+		"k8s.io/api/core/v1.SerializedReference":                                          schema_k8sio_api_core_v1_SerializedReference(ref),
+		"k8s.io/api/core/v1.Service":                                                      schema_k8sio_api_core_v1_Service(ref),
+		"k8s.io/api/core/v1.ServiceAccount":                                               schema_k8sio_api_core_v1_ServiceAccount(ref),
+		"k8s.io/api/core/v1.ServiceAccountList":                                           schema_k8sio_api_core_v1_ServiceAccountList(ref),
+		"k8s.io/api/core/v1.ServiceAccountTokenProjection":                                schema_k8sio_api_core_v1_ServiceAccountTokenProjection(ref),
+		"k8s.io/api/core/v1.ServiceList":                                                  schema_k8sio_api_core_v1_ServiceList(ref),
+		"k8s.io/api/core/v1.ServicePort":                                                  schema_k8sio_api_core_v1_ServicePort(ref),
+		"k8s.io/api/core/v1.ServiceProxyOptions":                                          schema_k8sio_api_core_v1_ServiceProxyOptions(ref),
+		"k8s.io/api/core/v1.ServiceSpec":                                                  schema_k8sio_api_core_v1_ServiceSpec(ref),
+		"k8s.io/api/core/v1.ServiceStatus":                                                schema_k8sio_api_core_v1_ServiceStatus(ref),
+		"k8s.io/api/core/v1.SessionAffinityConfig":                                        schema_k8sio_api_core_v1_SessionAffinityConfig(ref),
+		"k8s.io/api/core/v1.StorageOSPersistentVolumeSource":                              schema_k8sio_api_core_v1_StorageOSPersistentVolumeSource(ref),
+		"k8s.io/api/core/v1.StorageOSVolumeSource":                                        schema_k8sio_api_core_v1_StorageOSVolumeSource(ref),
+		"k8s.io/api/core/v1.Sysctl":                                                       schema_k8sio_api_core_v1_Sysctl(ref),
+		"k8s.io/api/core/v1.TCPSocketAction":                                              schema_k8sio_api_core_v1_TCPSocketAction(ref),
+		"k8s.io/api/core/v1.Taint":                                                        schema_k8sio_api_core_v1_Taint(ref),
+		"k8s.io/api/core/v1.Toleration":                                                   schema_k8sio_api_core_v1_Toleration(ref),
+		"k8s.io/api/core/v1.TopologySelectorLabelRequirement":                             schema_k8sio_api_core_v1_TopologySelectorLabelRequirement(ref),
+		"k8s.io/api/core/v1.TopologySelectorTerm":                                         schema_k8sio_api_core_v1_TopologySelectorTerm(ref),
+		"k8s.io/api/core/v1.TopologySpreadConstraint":                                     schema_k8sio_api_core_v1_TopologySpreadConstraint(ref),
+		"k8s.io/api/core/v1.TypedLocalObjectReference":                                    schema_k8sio_api_core_v1_TypedLocalObjectReference(ref),
+		"k8s.io/api/core/v1.Volume":                                                       schema_k8sio_api_core_v1_Volume(ref),
+		"k8s.io/api/core/v1.VolumeDevice":                                                 schema_k8sio_api_core_v1_VolumeDevice(ref),
+		"k8s.io/api/core/v1.VolumeMount":                                                  schema_k8sio_api_core_v1_VolumeMount(ref),
+		"k8s.io/api/core/v1.VolumeNodeAffinity":                                           schema_k8sio_api_core_v1_VolumeNodeAffinity(ref),
+		"k8s.io/api/core/v1.VolumeProjection":                                             schema_k8sio_api_core_v1_VolumeProjection(ref),
+		"k8s.io/api/core/v1.VolumeSource":                                                 schema_k8sio_api_core_v1_VolumeSource(ref),
+		"k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource":                               schema_k8sio_api_core_v1_VsphereVirtualDiskVolumeSource(ref),
+		"k8s.io/api/core/v1.WeightedPodAffinityTerm":                                      schema_k8sio_api_core_v1_WeightedPodAffinityTerm(ref),
+		"k8s.io/api/core/v1.WindowsSecurityContextOptions":                                schema_k8sio_api_core_v1_WindowsSecurityContextOptions(ref),
+		"k8s.io/apimachinery/pkg/api/resource.Quantity":                                   schema_apimachinery_pkg_api_resource_Quantity(ref),
+		"k8s.io/apimachinery/pkg/api/resource.int64Amount":                                schema_apimachinery_pkg_api_resource_int64Amount(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                   schema_pkg_apis_meta_v1_APIGroup(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                               schema_pkg_apis_meta_v1_APIGroupList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                schema_pkg_apis_meta_v1_APIResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":                            schema_pkg_apis_meta_v1_APIResourceList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":                                schema_pkg_apis_meta_v1_APIVersions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":                              schema_pkg_apis_meta_v1_CreateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":                              schema_pkg_apis_meta_v1_DeleteOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                                   schema_pkg_apis_meta_v1_Duration(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions":                              schema_pkg_apis_meta_v1_ExportOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1":                                   schema_pkg_apis_meta_v1_FieldsV1(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                                 schema_pkg_apis_meta_v1_GetOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                                  schema_pkg_apis_meta_v1_GroupKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":                              schema_pkg_apis_meta_v1_GroupResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":                               schema_pkg_apis_meta_v1_GroupVersion(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":                   schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":                           schema_pkg_apis_meta_v1_GroupVersionKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":                       schema_pkg_apis_meta_v1_GroupVersionResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":                              schema_pkg_apis_meta_v1_InternalEvent(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":                              schema_pkg_apis_meta_v1_LabelSelector(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":                   schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                                       schema_pkg_apis_meta_v1_List(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                                   schema_pkg_apis_meta_v1_ListMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":                                schema_pkg_apis_meta_v1_ListOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":                         schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                                  schema_pkg_apis_meta_v1_MicroTime(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                                 schema_pkg_apis_meta_v1_ObjectMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":                             schema_pkg_apis_meta_v1_OwnerReference(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":                      schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList":                  schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                                      schema_pkg_apis_meta_v1_Patch(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":                               schema_pkg_apis_meta_v1_PatchOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":                              schema_pkg_apis_meta_v1_Preconditions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                                  schema_pkg_apis_meta_v1_RootPaths(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR":                  schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                                     schema_pkg_apis_meta_v1_Status(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":                                schema_pkg_apis_meta_v1_StatusCause(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":                              schema_pkg_apis_meta_v1_StatusDetails(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                                      schema_pkg_apis_meta_v1_Table(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":                      schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":                               schema_pkg_apis_meta_v1_TableOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                                   schema_pkg_apis_meta_v1_TableRow(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":                          schema_pkg_apis_meta_v1_TableRowCondition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                                       schema_pkg_apis_meta_v1_Time(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                                  schema_pkg_apis_meta_v1_Timestamp(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                                   schema_pkg_apis_meta_v1_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":                              schema_pkg_apis_meta_v1_UpdateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                                 schema_pkg_apis_meta_v1_WatchEvent(ref),
+		"k8s.io/apimachinery/pkg/runtime.RawExtension":                                    schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref),
+		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                                        schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/runtime.Unknown":                                         schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
+		"k8s.io/apimachinery/pkg/version.Info":                                            schema_k8sio_apimachinery_pkg_version_Info(ref),
 	}
 }
 
-func schema_pkg_apis_provider_v1alpha1_AWSConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_monitoring_v1alpha1_Matcher(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfig used to represent workload cluster configuration in earlier releases. Deprecated.",
+				Type: []string{"object"},
+				Properties: map[string]spec.Schema{
+					"isRegex": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"boolean"},
+							Format: "",
+						},
+					},
+					"name": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"value": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+				},
+				Required: []string{"isRegex", "name", "value"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_monitoring_v1alpha1_Silence(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Silence represents schema for managed silences in Alertmanager. Reconciled by silence-operator.",
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -400,24 +356,19 @@ func schema_pkg_apis_provider_v1alpha1_AWSConfig(ref common.ReferenceCallback) c
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpec"),
-						},
-					},
-					"status": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatus"),
+							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.SilenceSpec"),
 						},
 					},
 				},
-				Required: []string{"metadata", "spec", "status"},
+				Required: []string{"metadata", "spec"},
 			},
 		},
 		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpec", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.SilenceSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_pkg_apis_provider_v1alpha1_AWSConfigList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_monitoring_v1alpha1_SilenceList(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -448,7 +399,7 @@ func schema_pkg_apis_provider_v1alpha1_AWSConfigList(ref common.ReferenceCallbac
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfig"),
+										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Silence"),
 									},
 								},
 							},
@@ -459,255 +410,50 @@ func schema_pkg_apis_provider_v1alpha1_AWSConfigList(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfig", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Silence", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_monitoring_v1alpha1_SilenceSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
 				Type: []string{"object"},
 				Properties: map[string]spec.Schema{
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster"),
-						},
-					},
-					"aws": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWS"),
-						},
-					},
-					"versionBundle": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecVersionBundle"),
-						},
-					},
-				},
-				Required: []string{"cluster", "aws", "versionBundle"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWS", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecVersionBundle", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWS(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"api": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPI"),
-						},
-					},
-					"az": {
-						SchemaProps: spec.SchemaProps{
-							Description: "\n\n    https://github.com/giantswarm/giantswarm/issues/4507",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"availabilityZones": {
-						SchemaProps: spec.SchemaProps{
-							Description: "AvailabilityZones is the number of AWS availability zones used to spread the workload cluster's worker nodes across. There are limitations on availability zone settings due to binary IP range splitting and provider specific region capabilities. When for instance choosing 3 availability zones, the configured IP range will be split into 4 ranges and thus one of it will not be able to be utilized. Such limitations have to be considered when designing the network topology and configuring workload cluster HA via AvailabilityZones.\n\nThe selection and usage of the actual availability zones for the created workload cluster is randomized. In case there are 4 availability zones provided in the used region and the user selects 2 availability zones, the actually used availability zones in which workload cluster workload is put into will tend to be different across workload cluster creations. This is done in order to provide more HA during single availability zone failures. In case a specific availability zone fails, not all workload clusters will be affected due to the described selection process.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-					"credentialSecret": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.CredentialSecret"),
-						},
-					},
-					"etcd": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcd"),
-						},
-					},
-					"hostedZones": {
-						SchemaProps: spec.SchemaProps{
-							Description: "HostedZones is AWS hosted zones names in the host cluster account. For each zone there will be \"CLUSTER_ID.k8s\" NS record created in the host cluster account. Then for each created NS record there will be a zone created in the guest account. After that component specific records under those zones:\n\t- api.CLUSTER_ID.k8s.{{ .Spec.AWS.HostedZones.API.Name }}\n\t- etcd.CLUSTER_ID.k8s.{{ .Spec.AWS.HostedZones.Etcd.Name }}\n\t- ingress.CLUSTER_ID.k8s.{{ .Spec.AWS.HostedZones.Ingress.Name }}\n\t- *.CLUSTER_ID.k8s.{{ .Spec.AWS.HostedZones.Ingress.Name }}",
-							Ref:         ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZones"),
-						},
-					},
-					"ingress": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngress"),
-						},
-					},
-					"masters": {
+					"targetTags": {
 						SchemaProps: spec.SchemaProps{
 							Type: []string{"array"},
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSNode"),
+										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.TargetTag"),
 									},
 								},
 							},
 						},
 					},
-					"region": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"vpc": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSVPC"),
-						},
-					},
-					"workers": {
+					"matchers": {
 						SchemaProps: spec.SchemaProps{
 							Type: []string{"array"},
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSNode"),
+										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Matcher"),
 									},
 								},
 							},
 						},
 					},
 				},
-				Required: []string{"api", "az", "availabilityZones", "credentialSecret", "etcd", "hostedZones", "ingress", "masters", "region", "vpc", "workers"},
+				Required: []string{"targetTags", "matchers"},
 			},
 		},
 		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPI", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcd", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZones", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngress", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSNode", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSVPC", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.CredentialSecret"},
+			"github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.Matcher", "github.com/giantswarm/apiextensions/v3/pkg/apis/monitoring/v1alpha1.TargetTag"},
 	}
 }
 
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSAPI(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSAPI deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"hostedZones": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"elb": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPIELB"),
-						},
-					},
-				},
-				Required: []string{"hostedZones", "elb"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSAPIELB"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSAPIELB(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSAPIELB deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"idleTimeoutSeconds": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"idleTimeoutSeconds"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSEtcd(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSEtcd deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"hostedZones": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"elb": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcdELB"),
-						},
-					},
-				},
-				Required: []string{"hostedZones", "elb"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSEtcdELB"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSEtcdELB(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSEtcdELB deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"idleTimeoutSeconds": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"idleTimeoutSeconds"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSHostedZones(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"api": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZonesZone"),
-						},
-					},
-					"etcd": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZonesZone"),
-						},
-					},
-					"ingress": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZonesZone"),
-						},
-					},
-				},
-				Required: []string{"api", "etcd", "ingress"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSHostedZonesZone"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSHostedZonesZone(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_monitoring_v1alpha1_TargetTag(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -719,2171 +465,16 @@ func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSHostedZonesZone(ref commo
 							Format: "",
 						},
 					},
-				},
-				Required: []string{"name"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSIngress(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSIngress deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"hostedZones": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"elb": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngressELB"),
-						},
-					},
-				},
-				Required: []string{"hostedZones", "elb"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigSpecAWSIngressELB"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSIngressELB(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AWSConfigSpecAWSIngressELB deprecated since aws-operator v12 resources.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"idleTimeoutSeconds": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"idleTimeoutSeconds"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSNode(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"imageID": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"instanceType": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"dockerVolumeSizeGB": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"imageID", "instanceType", "dockerVolumeSizeGB"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecAWSVPC(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"privateSubnetCidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"publicSubnetCidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"routeTableNames": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type:   []string{"string"},
-										Format: "",
-									},
-								},
-							},
-						},
-					},
-					"peerId": {
+					"value": {
 						SchemaProps: spec.SchemaProps{
 							Type:   []string{"string"},
 							Format: "",
 						},
 					},
 				},
-				Required: []string{"cidr", "privateSubnetCidr", "publicSubnetCidr", "routeTableNames", "peerId"},
+				Required: []string{"name", "value"},
 			},
 		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigSpecVersionBundle(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"version": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"version"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"aws": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWS"),
-						},
-					},
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"),
-						},
-					},
-				},
-				Required: []string{"aws", "cluster"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWS", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWS(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"availabilityZones": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZone"),
-									},
-								},
-							},
-						},
-					},
-					"autoScalingGroup": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAutoScalingGroup"),
-						},
-					},
-				},
-				Required: []string{"availabilityZones", "autoScalingGroup"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAutoScalingGroup", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZone"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAutoScalingGroup(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"name"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZone(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"subnet": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnet"),
-						},
-					},
-				},
-				Required: []string{"name", "subnet"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnet"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnet(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"private": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPrivate"),
-						},
-					},
-					"public": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPublic"),
-						},
-					},
-				},
-				Required: []string{"private", "public"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPrivate", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AWSConfigStatusAWSAvailabilityZoneSubnetPublic"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnetPrivate(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"cidr"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AWSConfigStatusAWSAvailabilityZoneSubnetPublic(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"cidr"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"kind": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"apiVersion": {
-						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"metadata": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
-						},
-					},
-					"spec": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpec"),
-						},
-					},
-					"status": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatus"),
-						},
-					},
-				},
-				Required: []string{"metadata", "spec", "status"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpec", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigList(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"kind": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"apiVersion": {
-						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"metadata": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
-						},
-					},
-					"items": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfig"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"metadata", "items"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfig", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster"),
-						},
-					},
-					"azure": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzure"),
-						},
-					},
-					"versionBundle": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecVersionBundle"),
-						},
-					},
-				},
-				Required: []string{"cluster", "azure", "versionBundle"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzure", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecVersionBundle", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzure(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"availabilityZones": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type:   []string{"integer"},
-										Format: "int32",
-									},
-								},
-							},
-						},
-					},
-					"credentialSecret": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.CredentialSecret"),
-						},
-					},
-					"dnsZones": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZones"),
-						},
-					},
-					"masters": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureNode"),
-									},
-								},
-							},
-						},
-					},
-					"virtualNetwork": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureVirtualNetwork"),
-						},
-					},
-					"workers": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureNode"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"availabilityZones", "credentialSecret", "dnsZones", "masters", "virtualNetwork", "workers"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZones", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureNode", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureVirtualNetwork", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.CredentialSecret"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureDNSZones(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AzureConfigSpecAzureDNSZones contains the DNS Zones of the cluster.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"api": {
-						SchemaProps: spec.SchemaProps{
-							Description: "API is the DNS Zone for the Kubernetes API.",
-							Ref:         ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZonesDNSZone"),
-						},
-					},
-					"etcd": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Etcd is the DNS Zone for the etcd cluster.",
-							Ref:         ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZonesDNSZone"),
-						},
-					},
-					"ingress": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Ingress is the DNS Zone for the Ingress resource, used for customer traffic.",
-							Ref:         ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZonesDNSZone"),
-						},
-					},
-				},
-				Required: []string{"api", "etcd", "ingress"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigSpecAzureDNSZonesDNSZone"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureDNSZonesDNSZone(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "AzureConfigSpecAzureDNSZonesDNSZone points to a DNS Zone in Azure.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"resourceGroup": {
-						SchemaProps: spec.SchemaProps{
-							Description: "ResourceGroup is the resource group of the zone.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Name is the name of the zone.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"resourceGroup", "name"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureNode(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"vmSize": {
-						SchemaProps: spec.SchemaProps{
-							Description: "VMSize is the master vm size (e.g. Standard_A1)",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"dockerVolumeSizeGB": {
-						SchemaProps: spec.SchemaProps{
-							Description: "DockerVolumeSizeGB is the size of a volume mounted to /var/lib/docker.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-					"kubeletVolumeSizeGB": {
-						SchemaProps: spec.SchemaProps{
-							Description: "KubeletVolumeSizeGB is the size of a volume mounted to /var/lib/kubelet.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-				},
-				Required: []string{"vmSize", "dockerVolumeSizeGB", "kubeletVolumeSizeGB"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecAzureVirtualNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Description: "CIDR is the CIDR for the Virtual Network.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"masterSubnetCIDR": {
-						SchemaProps: spec.SchemaProps{
-							Description: "is deleted. MasterSubnetCIDR is the CIDR for the master subnet.\n\n    https://github.com/giantswarm/giantswarm/issues/4358",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"workerSubnetCIDR": {
-						SchemaProps: spec.SchemaProps{
-							Description: "WorkerSubnetCIDR is the CIDR for the worker subnet.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"calicoSubnetCIDR": {
-						SchemaProps: spec.SchemaProps{
-							Description: "CalicoSubnetCIDR is the CIDR for the calico subnet. It has to be also a worker subnet (Azure limitation).",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"cidr", "masterSubnetCIDR", "workerSubnetCIDR", "calicoSubnetCIDR"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigSpecVersionBundle(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"version": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"version"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"),
-						},
-					},
-					"provider": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProvider"),
-						},
-					},
-				},
-				Required: []string{"cluster", "provider"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProvider", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProvider(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"availabilityZones": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type:   []string{"integer"},
-										Format: "int32",
-									},
-								},
-							},
-						},
-					},
-					"ingress": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngress"),
-						},
-					},
-				},
-				Required: []string{"ingress"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngress"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProviderIngress(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"loadBalancer": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngressLoadBalancer"),
-						},
-					},
-				},
-				Required: []string{"loadBalancer"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.AzureConfigStatusProviderIngressLoadBalancer"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_AzureConfigStatusProviderIngressLoadBalancer(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"publicIPName": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"publicIPName"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_Cluster(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"calico": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCalico"),
-						},
-					},
-					"customer": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCustomer"),
-						},
-					},
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDocker"),
-						},
-					},
-					"etcd": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterEtcd"),
-						},
-					},
-					"id": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"kubernetes": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetes"),
-						},
-					},
-					"masters": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterNode"),
-									},
-								},
-							},
-						},
-					},
-					"scaling": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterScaling"),
-						},
-					},
-					"version": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Version is DEPRECATED and should just be dropped.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"workers": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterNode"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"calico", "customer", "docker", "etcd", "id", "kubernetes", "masters", "scaling", "version"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCalico", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterCustomer", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDocker", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterEtcd", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetes", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterNode", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterScaling"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterCalico(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"mtu": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"subnet": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"cidr", "mtu", "subnet"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterCustomer(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"id": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"id"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"daemon": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDockerDaemon"),
-						},
-					},
-				},
-				Required: []string{"daemon"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterDockerDaemon"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterDockerDaemon(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"cidr"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterEtcd(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"altNames": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"domain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"port": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"prefix": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"altNames", "domain", "port", "prefix"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetes(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"api": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesAPI"),
-						},
-					},
-					"cloudProvider": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"dns": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesDNS"),
-						},
-					},
-					"domain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"ingressController": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressController"),
-						},
-					},
-					"kubelet": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesKubelet"),
-						},
-					},
-					"networkSetup": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetup"),
-						},
-					},
-					"ssh": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSH"),
-						},
-					},
-				},
-				Required: []string{"api", "cloudProvider", "dns", "domain", "ingressController", "kubelet", "networkSetup", "ssh"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesAPI", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesDNS", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressController", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesKubelet", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetup", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSH"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesAPI(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"clusterIPRange": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"domain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"securePort": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"clusterIPRange", "domain", "securePort"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesDNS(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"ip": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"ip"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesIngressController(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressControllerDocker"),
-						},
-					},
-					"domain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"wildcardDomain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"insecurePort": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"securePort": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"docker", "domain", "wildcardDomain", "insecurePort", "securePort"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesIngressControllerDocker"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesIngressControllerDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesKubelet(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"altNames": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"domain": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"labels": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"port": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"altNames", "domain", "labels", "port"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetup(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupDocker"),
-						},
-					},
-					"kubeProxy": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupKubeProxy"),
-						},
-					},
-				},
-				Required: []string{"docker", "kubeProxy"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupDocker", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesNetworkSetupKubeProxy"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetupDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesNetworkSetupKubeProxy(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "ClusterKubernetesNetworkSetupKubeProxy describes values passed to the kube-proxy running in a workload cluster.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"conntrackMaxPerCore": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Maximum number of NAT connections to track per CPU core (0 to leave the limit as-is and ignore conntrack-min). Passed to kube-proxy as --conntrack-max-per-core.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-				},
-				Required: []string{"conntrackMaxPerCore"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesSSH(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"userList": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSHUser"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"userList"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.ClusterKubernetesSSHUser"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterKubernetesSSHUser(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"publicKey": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"name", "publicKey"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterNode(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"id": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"id"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_ClusterScaling(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"max": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Max defines maximum number of worker nodes guest cluster is allowed to have.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-					"min": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Min defines minimum number of worker nodes required to be present in guest cluster.",
-							Type:        []string{"integer"},
-							Format:      "int32",
-						},
-					},
-				},
-				Required: []string{"max", "min"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_CredentialSecret(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"namespace": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"name", "namespace"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"kind": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"apiVersion": {
-						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"metadata": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
-						},
-					},
-					"spec": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpec"),
-						},
-					},
-					"status": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatus"),
-						},
-					},
-				},
-				Required: []string{"metadata", "spec", "status"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpec", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigList(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"kind": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"apiVersion": {
-						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"metadata": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
-						},
-					},
-					"items": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfig"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"metadata", "items"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfig", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster"),
-						},
-					},
-					"kvm": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVM"),
-						},
-					},
-					"versionBundle": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecVersionBundle"),
-						},
-					},
-				},
-				Required: []string{"cluster", "kvm", "versionBundle"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.Cluster", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVM", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecVersionBundle"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVM(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"endpointUpdater": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdater"),
-						},
-					},
-					"k8sKVM": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVM"),
-						},
-					},
-					"masters": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNode"),
-									},
-								},
-							},
-						},
-					},
-					"network": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetwork"),
-						},
-					},
-					"nodeController": {
-						SchemaProps: spec.SchemaProps{
-							Description: "NOTE THIS IS DEPRECATED",
-							Ref:         ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeController"),
-						},
-					},
-					"portMappings": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMPortMappings"),
-									},
-								},
-							},
-						},
-					},
-					"workers": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNode"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"endpointUpdater", "k8sKVM", "masters", "network", "nodeController", "portMappings", "workers"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdater", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVM", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetwork", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNode", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeController", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMPortMappings"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMEndpointUpdater(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdaterDocker"),
-						},
-					},
-				},
-				Required: []string{"docker"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMEndpointUpdaterDocker"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMEndpointUpdaterDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMK8sKVM(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVMDocker"),
-						},
-					},
-					"storageType": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"docker", "storageType"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMK8sKVMDocker"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMK8sKVMDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"flannel": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetworkFlannel"),
-						},
-					},
-				},
-				Required: []string{"flannel"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNetworkFlannel"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNetworkFlannel(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"vni": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"vni"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNode(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cpus": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"disk": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/serialization.Float"),
-						},
-					},
-					"memory": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"dockerVolumeSizeGB": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"cpus", "disk", "memory", "dockerVolumeSizeGB"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/serialization.Float"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNodeController(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "NOTE THIS IS DEPRECATED",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"docker": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeControllerDocker"),
-						},
-					},
-				},
-				Required: []string{"docker"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigSpecKVMNodeControllerDocker"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMNodeControllerDocker(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "NOTE THIS IS DEPRECATED",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"image": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"image"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecKVMPortMappings(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-					"nodePort": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-					"targetPort": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"name", "nodePort", "targetPort"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigSpecVersionBundle(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"version": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"version"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cluster": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"),
-						},
-					},
-					"kvm": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatusKVM"),
-						},
-					},
-				},
-				Required: []string{"cluster", "kvm"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.KVMConfigStatusKVM", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusCluster"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_KVMConfigStatusKVM(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"nodeIndexes": {
-						SchemaProps: spec.SchemaProps{
-							Description: "NodeIndexes is a map from nodeID -> nodeIndex. This is used to create deterministic iSCSI initiator names.",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type:   []string{"integer"},
-										Format: "int32",
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"nodeIndexes"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusCluster(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"conditions": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Conditions is a list of status information expressing the current conditional state of a guest cluster. This may reflect the status of the guest cluster being updating or being up to date.",
-							Type:        []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterCondition"),
-									},
-								},
-							},
-						},
-					},
-					"network": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNetwork"),
-						},
-					},
-					"nodes": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Nodes is a list of guest cluster node information reflecting the current state of the guest cluster nodes.",
-							Type:        []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNode"),
-									},
-								},
-							},
-						},
-					},
-					"resources": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Resources is a list of arbitrary conditions of operatorkit resource implementations.",
-							Type:        []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResource"),
-									},
-								},
-							},
-						},
-					},
-					"scaling": {
-						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterScaling"),
-						},
-					},
-					"versions": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Versions is a list that acts like a historical track record of versions a guest cluster went through. A version is only added to the list as soon as the guest cluster successfully migrated to the version added here.",
-							Type:        []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterVersion"),
-									},
-								},
-							},
-						},
-					},
-				},
-				Required: []string{"network", "scaling"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterCondition", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNetwork", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterNode", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResource", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterScaling", "github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterVersion"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterCondition expresses the conditions in which a guest cluster may is.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"lastTransitionTime": {
-						SchemaProps: spec.SchemaProps{
-							Description: "LastTransitionTime is the last time the condition transitioned from one status to another.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
-						},
-					},
-					"status": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Status may be True, False or Unknown.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"type": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Type may be Creating, Created, Scaling, Scaled, Draining, Drained, Updating, Updated, Deleting, Deleted.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"status", "type"},
-			},
-		},
-		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterNetwork expresses the network segment that is allocated for a guest cluster.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"cidr": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"cidr"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterNode(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterNode holds information about a guest cluster node.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"labels": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Labels contains the kubernetes labels for corresponding node.",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type:   []string{"string"},
-										Format: "",
-									},
-								},
-							},
-						},
-					},
-					"lastTransitionTime": {
-						SchemaProps: spec.SchemaProps{
-							Description: "LastTransitionTime is the last time the condition transitioned from one status to another.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
-						},
-					},
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Name referrs to a workload cluster node name.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"version": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Version referrs to the version used by the node as mandated by the provider operator.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"name", "version"},
-			},
-		},
-		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterResource(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "Resource is structure holding arbitrary conditions of operatorkit resource implementations. Imagine an operator implements an instance resource. This resource may operates sequentially but has to operate based on a certain system state it manages. So it tracks the status as needed here specific to its own implementation and means in order to fulfil its premise.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"conditions": {
-						SchemaProps: spec.SchemaProps{
-							Type: []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResourceCondition"),
-									},
-								},
-							},
-						},
-					},
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"string"},
-							Format: "",
-						},
-					},
-				},
-				Required: []string{"name"},
-			},
-		},
-		Dependencies: []string{
-			"github.com/giantswarm/apiextensions/v3/pkg/apis/provider/v1alpha1.StatusClusterResourceCondition"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterResourceCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterResourceCondition expresses the conditions in which an operatorkit resource may is.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"lastTransitionTime": {
-						SchemaProps: spec.SchemaProps{
-							Description: "LastTransitionTime is the last time the condition transitioned from one status to another.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
-						},
-					},
-					"status": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Status may be True, False or Unknown.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"type": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Type may be anything an operatorkit resource may define.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"status", "type"},
-			},
-		},
-		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterScaling(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterScaling expresses the current status of desired number of worker nodes in guest cluster.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"desiredCapacity": {
-						SchemaProps: spec.SchemaProps{
-							Type:   []string{"integer"},
-							Format: "int32",
-						},
-					},
-				},
-				Required: []string{"desiredCapacity"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_provider_v1alpha1_StatusClusterVersion(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "StatusClusterVersion expresses the versions in which a guest cluster was and may still be.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"date": {
-						SchemaProps: spec.SchemaProps{
-							Description: "This can be removed ones the new properties are properly used in all workload clusters.\n\n    https://github.com/giantswarm/giantswarm/issues/3988",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
-						},
-					},
-					"lastTransitionTime": {
-						SchemaProps: spec.SchemaProps{
-							Description: "LastTransitionTime is the last time the condition transitioned from one status to another.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
-						},
-					},
-					"semver": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Semver is some semver version, e.g. 1.0.0.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"semver"},
-			},
-		},
-		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
 	}
 }
 
